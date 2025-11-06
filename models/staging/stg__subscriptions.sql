@@ -26,6 +26,6 @@ normalized as (
   from src
   where start_date <= to_date('{{ var("end_date") }}')
     and (end_date is null or end_date >= to_date('{{ var("start_date") }}'))
-    and status='active'
+    -- and status='active'
 )
 select * from normalized

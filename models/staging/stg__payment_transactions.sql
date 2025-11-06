@@ -7,7 +7,7 @@
 
 with src as (
   select * from {{ source('raw_prod','payment_transactions') }}
-  where subscription_id in (select subscription_id from {{ref("stg__subscriptions")}})
+--   where subscription_id in (select subscription_id from {{ref("stg__subscriptions")}})
 ),
 
 filtered as (
